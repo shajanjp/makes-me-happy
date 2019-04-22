@@ -38,5 +38,9 @@ for (let text of textItems) {
     e.target.parentNode.removeChild(e.target);
   })
   items.appendChild(item);
-  console.log('items', items);
 }
+
+let item = document.getElementsByClassName("item")[0];
+item.style.left = `${Math.ceil((screenWidth/2) - (item.offsetWidth / 2))}px`;
+item.style.top = `${Math.ceil((screenHeight/2) - (item.offsetHeight / 2))}px`;
+item.style.zIndex = '4';
